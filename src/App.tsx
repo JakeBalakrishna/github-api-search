@@ -1,3 +1,4 @@
+import React from "react";
 import "@tamagui/core/reset.css";
 import { TamaguiProvider } from "tamagui";
 import config from "../tamagui.config";

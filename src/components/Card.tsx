@@ -1,6 +1,11 @@
-import { Button, Card, Image, Text, XStack, YStack } from "tamagui";
+import React from "react";
+import { Card, Image, Text, XStack, YStack } from "tamagui";
+interface InfoCardProps {
+  username: string;
+  id: string;
+}
 
-const InfoCard = () => {
+const InfoCard: React.FC<InfoCardProps> = ({ username, id }) => {
   return (
     <Card
       flex={1}
@@ -24,8 +29,8 @@ const InfoCard = () => {
           }}
         />
         <YStack marginRight="$3">
-          <Text>User Name</Text>
-          <Text>ID:023948</Text>
+          <Text>{username}</Text>
+          <Text>ID:{id}</Text>
         </YStack>
       </XStack>
     </Card>
